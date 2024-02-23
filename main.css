@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+nav {
+  background-color: #1a1a1a;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.copyleft{
+  display:inline-block;
+  transform: rotate(180deg);
+}
+
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 7%;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.my-special-nav h1 {
+  font-size: 53px;
+  margin-bottom: 10px;
+  color: #996633; 
+}
+
+.my-special-nav text {
+  font-size: larger;
+  margin-bottom: 10px;
+  color: #996633;
+}
+
+.my-special-nav form {
+  padding: 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-special-nav label {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.my-special-nav input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.my-special-nav button {
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  background-color: #996633; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.anime {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+h1 {
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+label {
+  display: flexbox;
+  align-items: center;
+  margin-right: 10px;
+}
+
+input[type="checkbox"],
+input[type="button"],
+input[type="search"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  padding: 8px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+#tableAnimes {
+  padding-left: 15%;
+  padding-right: 15%;
+}

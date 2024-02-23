@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Flaskime</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- atenção a imagem abaixo não fui eu que fiz, encontrei ela na web a um bom tempo e decidi utiliza-lá no projeto.-->
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/1b/72/1d/1b721d5e0a035fdbc7ff43632a67749c.png">
+</head>
+<body>
+    <nav class="my-special-nav">
+        <h1>Flaskime!</h1>
+        <text>Your local anime library</text>
+        <br>
+        <form action="" method="GET">
+            <table>
+                <th>The Flaskime-Server is running on:</th>
+                <th><input type="text" id="localadress" placeholder="your local adress"></th>
+                <th><input type="number" id="port" placeholder="your server port"></th>
+                <label for="search">
+                    <input type="search" id="search" placeholder="Enter anime name...">
+                    <label for="nsfw">
+                        NSFW content: <input type="checkbox" id="nsfw" name="nsfw" value="Filtro NSFW" class="nsfw">
+                </label>
+                </label>            
+                    <th><button type="button" onclick="listarAnime()">My List</button></th>
+                    <th><button type="button" onclick="buscarAnime()">Search</button></th>
+            </table>
+        </form>
+    </nav>
+    <div id="resultados"></div>
+    <footer class="footer">
+        <p>Your personal haven for anime: private, secure, and always local.</p>
+        <p><span class="copyleft">&copy;</span> Copyleft <span id='currentYear'></span> <a href="https://github.com/Atn4s">Atn4s</a>. Crafted for all who value privacy and security: Share, modify, and thrive within the boundaries of the <a href='https://www.gnu.org/licenses/gpl-3.0.html' target='_blank'>GNU GPL version 3</a></p>
+    </footer> 
+</body>
+</html>
