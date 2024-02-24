@@ -1,17 +1,24 @@
-# Flaskime Server!
-Um projeto pessoal feito para controlar todos os animes que assisti ou quero assistir, tudo localmente sob licença GPLV3
+# Flaskime!
+Um projeto pessoal feito para listar todos os animes que assisti ou pretendo assistir, tudo localmente sob licença: <br>
 [![Licença](https://www.gnu.org/graphics/gplv3-127x51.png)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ## Interessante, como funciona?
-Bom o sistema Flaskime (combinação da palavra Flask e Anime) é dividido em 2 repositórios o servidor disponivel em:
-<a href="https://github.com/Atn4s/Flaskime_server">Servidor Flaskime</a> 
-e o Front-End em:
-<a href="https://github.com/Atn4s/Flaskime_web">Pagina web Flaskime</a> (atual)
+Bom o sistema Flaskime (combinação da palavra Flask e Anime) é dividido em 2 repositórios: 
+<br> 
+<a href="https://github.com/Atn4s/Flaskime_server">Servidor Flaskime</a> (atual)
+<br> 
+<a href="https://github.com/Atn4s/Flaskime_web">Pagina web Flaskime</a>
+<br>
+<p> A lógica de obter a lista de animes é feito apartir da API <a href="https://jikan.moe/"> Jikan </a>
+e a lógica de gravar os animes é feito pelo banco de dados SQLite3 criando um database 
+listaanime.db que ao executar o servidor ele é criado automaticamente para facilitar 😃 (seu script está disponivel em banco.py)
 
-<b> 1 - Imagino que você seguiu os passos da versão do servidor certo? qualquer coisa de uma olhadinha nele antes de seguir aqui!</b>
+## Como posso testar?
+
+<b> 1 - Imagino que você seguiu os passos do <a href="https://github.com/Atn4s/Flaskime_server">servidor</a> certo? qualquer coisa de uma olhadinha nele antes de seguir aqui!</b>
 <br>
 <br>
-<b> 2 - A pagina ao carregar vai ter uma interface com alguns inputs, os mais inportantes são o 127.0.0.1 e 5000</b>
+<b> 2 - A pagina ao carregar vai ter uma interface com alguns inputs em: The Flaskime-Server is running on: 127.0.0.1 e 5000</b>
 <br>
 <br>
 <i> Por que? </i>
