@@ -38,48 +38,49 @@ function buscarAnime() {
     function exibirResultados(response) {
         // Limpa qualquer resultado anterior
         $('#resultados').empty();
-
+    
         var animes = response.data;
-
+    
         if (animes.length > 0) {
             // Cria a tabela
             var table = $('<table>').attr('id', 'tableAnimes');
             var thead = $('<thead>').appendTo(table);
             var tbody = $('<tbody>').appendTo(table);
-
+    
             // Cria a linha de cabeçalho
             var headerRow = $('<tr>').appendTo(thead);
             $('<th>').text('Capa').appendTo(headerRow);
             $('<th>').text('Título').appendTo(headerRow);
             $('<th>').text('Descrição').appendTo(headerRow);
-            $('<th>').text('Assistiu?').appendTo(headerRow);
-            $('<th>').text('Ações').appendTo(headerRow);
-
+            $('<th>').text('Ações').appendTo(headerRow); // Apenas uma coluna para "Ações"
+    
             // Itera sobre os animes e cria as linhas da tabela
             for (var i = 0; i < animes.length; i++) {
                 var anime = animes[i];
-
+    
                 // Cria uma linha para cada anime
                 var row = $('<tr>').appendTo(tbody);
-
+    
                 // Adiciona a imagem do anime (capa) com tamanho maior
                 var capaCell = $('<td>').addClass('capaCell').appendTo(row);
                 $('<img>').attr('src', anime.images.jpg.large_image_url).appendTo(capaCell);
-
+    
                 // Adiciona o título do anime
                 $('<td>').text(anime.title).appendTo(row);
-
+    
                 // Adiciona a descrição do anime
                 $('<td>').text(anime.synopsis).appendTo(row);
-
+    
+                // Cria uma célula para "Ações" contendo os botões e o checkbox
+                var actionsCell = $('<td>').appendTo(row);
+    
                 // Adiciona o checkbox para indicar se o anime está completo ou não
                 var completoCheckbox = $('<input>').attr({
                     type: 'checkbox',
                     id: 'completoCheckbox' + i, // Adicione um identificador único para cada checkbox
-                });
-                $('<td>').append(completoCheckbox).appendTo(row);
-
-                // Cria um botão para cada linha
+                }).appendTo(actionsCell);
+    
+                // Cria um botão para detalhes
                 var btnDetalhes = $('<button>').html('&#9432;').click((function (anime, index) {
                     return function () {
                         // Cria uma janela de diálogo com os detalhes do anime
@@ -91,7 +92,7 @@ function buscarAnime() {
                             '<p><strong>Rating:</strong> ' + anime.rating + '</p>' +
                             '<p><strong>Popularity:</strong> ' + anime.popularity + '</p>' +
                             '<p><strong>Score:</strong> ' + anime.score + '</p>';
-
+    
                         $('<div>').html(detalhesHTML).dialog({
                             title: 'Detalhes do Anime',
                             modal: true,
@@ -104,25 +105,19 @@ function buscarAnime() {
                         });
                     };
                 })(anime, i));
-
+    
+                // Cria um botão para adicionar aos favoritos
                 var btnAdicionar = $('<button>').html('&#10084;').click((function (anime, index) {
                     return function () {
                         // Chama a função para adicionar o anime ao banco de dados
                         adicionarAnimeAoBanco(anime, index);
                     };
                 })(anime, i));
-
-                // Adiciona a célula de adicionar aos favoritos
-                var adicionarCell = $('<td>').appendTo(row);
-                // Adiciona o botão de coração
-                $('<td>').append(btnAdicionar).appendTo(row);
-
-                // Adiciona a célula de detalhes
-                var detalhesCell = $('<td>').appendTo(row);
-                // Adiciona o botão de detalhes
-                $('<td>').append(btnDetalhes).appendTo(row);
+    
+                // Adiciona os botões e o checkbox à célula de "Ações"
+                actionsCell.append(completoCheckbox).append(btnAdicionar).append(btnDetalhes);
             }
-
+    
             // Adiciona a tabela ao elemento #resultados
             $('#resultados').append(table);
         } else {

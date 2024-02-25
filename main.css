@@ -7,44 +7,42 @@ body {
 
 nav {
   background-color: #1a1a1a;
-  padding: 10px;
+  padding: 1%;
   color: #fff;
   text-align: center;
 }
 
-.copyleft{
-  display:inline-block;
+.copyleft {
+  display: inline-block;
   transform: rotate(180deg);
 }
 
 footer {
   position: relative;
-  left: 0;
   bottom: 0;
   height: 7%;
-  width: 100%;
   background-color: #1a1a1a;
   color: #fff;
   text-align: center;
 }
 
 .my-special-nav h1 {
-  font-size: 53px;
-  margin-bottom: 10px;
-  color: #996633; 
+  font-size: 3vw; 
+  margin-bottom: 1%;
+  color: #996633;
 }
 
 .my-special-nav text {
   font-size: larger;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
   color: #996633;
 }
 
 .my-special-nav form {
-  padding: 10px;
-  margin-left: 25%;
-  margin-right: 25%;
-  border: 1px solid #ccc; 
+  padding: 1%;
+  border: 1px solid #ccc;
+  margin-left: 10%;
+  margin-right: 10%;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -52,22 +50,26 @@ footer {
 }
 
 .my-special-nav label {
-  margin-bottom: 10px;
+  margin-bottom: 1%;
   color: #666;
 }
 
 .my-special-nav input {
-  padding: 8px;
-  font-size: 16px;
+  padding: 0.5rem;
+  font-size: 1.2vw; 
   border: 1px solid #ccc;
-  margin-bottom: 10px;
+  margin-bottom: 1%;
+}
+
+input[type="text"], input[type="number"], input[type="search"] {
+  width: 75%;
 }
 
 .my-special-nav button {
-  padding: 10px 10px;
-  margin-bottom: 10px;
-  font-size: 15px;
-  background-color: #996633; 
+  padding: 0.5rem 1rem;
+  margin-bottom: 1%;
+  font-size: 1.2vw; 
+  background-color: #996633;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -75,37 +77,38 @@ footer {
 
 .anime {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 1%;
+  padding: 1%;
 }
 
 h1 {
-  margin: 10px;
+  margin: 1%;
 }
 
 form {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 1%;
 }
 
 label {
-  display: flexbox;
+  display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 1%;
 }
 
 input[type="checkbox"],
 input[type="button"],
 input[type="search"] {
-  padding: 8px;
+  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
 input[type="submit"] {
-  padding: 8px;
+  padding: 0.5rem;
   background-color: #4CAF50;
   color: #fff;
   border: none;
@@ -117,7 +120,44 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
+/* Estilos para a tabela de resultados */
 #tableAnimes {
-  padding-left: 15%;
-  padding-right: 15%;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tableAnimes th,
+#tableAnimes td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#tableAnimes th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para a imagem do anime */
+.capaCell img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para os botões */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilos para a mensagem quando nenhum anime é encontrado */
+#resultados {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #888;
 }
