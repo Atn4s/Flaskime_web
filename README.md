@@ -5,9 +5,9 @@ Um projeto pessoal feito para listar todos os animes que assisti ou pretendo ass
 ## Interessante, como funciona?
 Bom o sistema Flaskime (combinação da palavra Flask e Anime) é dividido em 2 repositórios: 
 <br> 
-<a href="https://github.com/Atn4s/Flaskime_server">Servidor Flaskime</a> (atual)
+<a href="https://github.com/Atn4s/Flaskime_server">Servidor Flaskime</a> 
 <br> 
-<a href="https://github.com/Atn4s/Flaskime_web">Pagina web Flaskime</a>
+<a href="https://github.com/Atn4s/Flaskime_web">Pagina web Flaskime</a> (atual)
 <br>
 <p> A lógica de obter a lista de animes é feito apartir da API <a href="https://jikan.moe/"> Jikan </a>
 e a lógica de gravar os animes é feito pelo banco de dados SQLite3 criando um database 
